@@ -1,0 +1,40 @@
+nav{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        font-size: 17px;
+    }
+    li{
+        float: left;
+        list-style: none;
+    }
+    a {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: aliceblue;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            flex-direction: column;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+    }
+}
+
+section{
+    
+}
