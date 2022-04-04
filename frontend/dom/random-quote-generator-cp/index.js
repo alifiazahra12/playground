@@ -2,11 +2,11 @@
 Uncomment variable dibawah ini untuk mulai mengerjakan. dilarang mengganti nama variable yang dibuat.
 */
 
-// let quote = element untuk menampilkan quote
-// let author = element untuk menampilkan author
-// let citation = element untuk menampilkan citation
-// let year = element untuk menampilkan year
-// let button = tombol untuk melakuan generate random quote
+let quote = document.getElementsById('quote')[0]
+let author = document.getElementsByClassName('author')[0]
+let citation = document.getElementsByClassName('citation')[0]
+let year = document.getElementById('year')
+let button = document.getElementsByClassName('button')[0]
 
 var quotes = [
 	{
@@ -174,10 +174,26 @@ var quotes = [
 // TODO: answer here
 
 function getQuote() {
-	// TODO: answer here
+	const index = Math.floor(Math.random()*allQuotes.length);
+	const quote=allQuotes[index].quote;
+	const author=allQuotes[index].author;
+	const citation=allQuotes[index].citation;
+	const year=allQuotes[index].year;
+	if(author==null)
+    {
+        author = "Anonymous";
+    }
+ 
+    //function to dynamically display the quote and the author
+    quote.innerHTML=quote;
+    author.innerHTML="~ "+author;
+	citation.innerHTML=citation;
+	year.innerHTML=year;
 }
 
 
 function displayQuote() {
-	// TODO: answer here
+	getQuote();
 }
+
+displayQuote();
